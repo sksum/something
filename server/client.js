@@ -183,6 +183,16 @@ function Server(wsPort) {
       : "ws://" + window.location.host;
       this.socket = new WebSocket(socketURL);
 
+      // OFFLINE FALLBACK: IF THE CONNECTION FAILS AND THE SERVER NEVER SENT A
+      // CLIENT LIST (e.g. STATIC HOSTING SUCH AS GITHUB PAGES), ACT AS A
+      // SINGLE CLIENT SO clientID / clientState KEEP WORKING.
+      this.socket.onerror = () => {
+         if (window.clients === undefined) {
+            console.warn("[server] No backend detected — running in offline single-client mode.");
+            window.clients = [0];
+         }
+      };
+
       // this.socket = new WebSocket("ws://" + window.location.hostname + ":" + wsPort);
       this.socket.binaryType = "arraybuffer";
 
