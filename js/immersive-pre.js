@@ -9,7 +9,7 @@ import { Ray } from "./render/math/ray.js";
 import { InlineViewerHelper } from "./util/inline-viewer-helper.js";
 import { QueryArgs } from "./util/query-args.js";
 import { EventBus } from "./primitive/eventbus.js";
-import { init as handTrackerInit } from "/js/render/core/videoHandTracker.js";
+import { init as handTrackerInit } from "./render/core/videoHandTracker.js";
 import * as DefaultSystemEvents from "./primitive/event.js";
 import { dataSendToUnity } from "./data/dataToUnity.js";
 
@@ -63,7 +63,7 @@ if (QueryArgs.getBool("usePolyfill", true)) {
     let polyfill = new WebXRPolyfill();
 }
 
-import { scenesSetup } from "/js/handle_scenes.js";
+import { scenesSetup } from "./handle_scenes.js";
 
 // XR globals.
 let xrButton = null;

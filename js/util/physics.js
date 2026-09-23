@@ -10,7 +10,7 @@
  * - COLLISION DETECTION
  * */
 
-import * as cg from "/js/render/core/cg.js";
+import * as cg from "../render/core/cg.js";
 
 let staticParams = 0.01;
 let gravity = 9.8;

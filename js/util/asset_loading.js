@@ -80,7 +80,7 @@ export function loadTextureAssetFromFile(args) {
    const path     = args.path;
    const handler  = args.handler;
    const fileName = args.fileName;
-   args.rootPath =  (args.rootPath != undefined) ? args.rootPath : "/media/textures/";
+   args.rootPath =  (args.rootPath != undefined) ? args.rootPath : "media/textures/";
    const rootPath = args.rootPath;
    return loadJSON(path, fileName, rootPath)
   .then((data) => { 

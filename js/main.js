@@ -1,4 +1,4 @@
-import { EventBus } from "/js/primitive/eventbus.js";
+import { EventBus } from "./primitive/eventbus.js";
 
 const FC_queryParams = new Proxy(new URLSearchParams(window.location.search), {
   get: (searchParams, prop) => searchParams.get(prop),
@@ -102,14 +102,14 @@ window.togglePresentationFlags = (flags) => {
 window.EventBus = new EventBus();
 
 async function main() {
-    import("/js/corelink_handler.js").then(async (mod) => {
+    import("./corelink_handler.js").then(async (mod) => {
          await mod.run();
       });
    
 }
 
 async function mainSub() {
-   const mod = await import('/js/render/core/videoHandTracker.js');
+   const mod = await import('./render/core/videoHandTracker.js');
    mod.init(null, (handInfo_, fullResults_) => {
       window.sharedChan.postMessage(handInfo_);
    });      

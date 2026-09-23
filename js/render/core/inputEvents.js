@@ -1,7 +1,7 @@
 import * as cg from "./cg.js";
 import { controllerEventTypes, controllerMatrix } from "./controllerInput.js";
 import * as global from "../../global.js";
-import * as sync from "/js/util/sync.js";
+import * as sync from "../../util/sync.js";
 
 let isDebug = false;
 

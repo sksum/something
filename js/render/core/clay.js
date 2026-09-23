@@ -1,5 +1,5 @@
 "use strict";
-import { scenes } from "/js/handle_scenes.js";
+import { scenes } from "../../handle_scenes.js";
 import * as cg from "./cg.js";
 import { buttonState, controllerMatrix } from "./controllerInput.js";
 import { HandsWidget } from "./handsWidget.js";
@@ -17,13 +17,13 @@ import { ClientStateSharing } from "./clientStateSharing.js";
 import * as glUtil from "./gl_util.js"
 import * as clayExtensions from "./clay_extensions.js";
 
-import * as wasm from "/js/wasm.js";
+import * as wasm from "../../wasm.js";
 
 import { selfDefinedAvatar } from "./myAvatar.js";
 
-import * as sync from "/js/util/sync.js";
+import * as sync from "../../util/sync.js";
 import * as input from "./inputEvents.js";
-import * as room_mng from "/js/util/room_manager.js";
+import * as room_mng from "../../util/room_manager.js";
 import * as audio from "../../util/spatial-audio.js"
 
 import * as txtrManager from "./textureManager.js";

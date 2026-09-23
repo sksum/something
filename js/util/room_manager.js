@@ -1,4 +1,4 @@
-import * as cg from "/js/render/core/cg.js";
+import * as cg from "../render/core/cg.js";
 
 export let saveRoom = (roomID) => {
 

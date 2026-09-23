@@ -1,5 +1,5 @@
-import * as cg from "/js/render/core/cg.js";
-import * as room_mng from "/js/util/room_manager.js";
+import * as cg from "../render/core/cg.js";
+import * as room_mng from "./room_manager.js";
 
 export let setOriginPos = (worldCoords) => {
     if (window.xrRefSpace.boundsGeometry === undefined)
